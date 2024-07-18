@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #6a2adf;
+}
+
+.container{
+    width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.container h1 {
+    font-weight: 600;    
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+}
+.wrapper{
+    margin: 1.5rem;
+}
+.wrapper .input-box{
+    position: relative;
+}
+.wrapper .input-box>input{
+    width: 100%;
+    height: 55px;
+    color: black;
+    background: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 0.2rem 0 1rem;
+}
+.wrapper .input-box span{
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    line-height: 55px;
+    color: #707070;
+}
+
+.wrapper .input-box span:hover{
+    color: #50e804;
+}
+.wrapper .pass-indicator{
+    width: 100%;
+    height: 5px;
+    position: relative;
+    margin-top: 1rem;
+    border-radius: 25px;
+}
+.wrapper .pass-indicator::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    transition: width 0.4s ease;
+}
+.wrapper .pass-indicator.weak::before{
+    width: 20%;
+    background: #e80f04;
+}
+.wrapper .pass-indicator.medium::before{
+    width: 50%;
+    background: #faec2b;
+}
+.wrapper .pass-indicator.strong::before{
+    width: 100%;
+    background: #23ea68;
+}
+.wrapper .pass-lenght{
+    margin: 1.5rem 0;
+}
+.wrapper .pass-lenght .detail{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .pass-lenght input{
+    width: 100%;
+    height: 5px;
+}
+.wrapper .pass-settings .options{
+    display: flex;
+    list-style-type: none;
+    font-weight: wrap;
+    margin-top: 1rem;
+}
+.wrapper .pass-settings .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100%/2);
+}
+.wrapper .pass-settings .options .option:first-child{
+    pointer-events: none;
+}
+.wrapper .pass-settings .options .option:first-child input{
+    opacity: .75;
+    
+}
+.wrapper .pass-settings .options .option input{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.wrapper .pass-settings .options .option label{
+    cursor: pointer;
+    color: #4f4f4f;
+    padding-left: .5rem;
+}
+.wrapper .generate-btn{
+    width: 100%;
+    color: #fff;
+    background: #7fba62;
+    padding: 1rem 0;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    border: none;
+    font-size: 1rem;
+}
